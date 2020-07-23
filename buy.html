@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font-family:Arial,Helvetica,sans-serif;}
+form{
+border:3 px solid #f1f1f1;}
+.p2{
+margin-left:480px;
+width: 500px;}
+.p3{
+margin-left:400px;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+.container {
+  padding: 16px;
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+}
+</style>
+</head>
+<body style="background-image:url(C:/Users/NIVEDITHA/OneDrive/Desktop/project/logi3.jfif);background-repeat:no-repeat;background-size:100% 200%">
+<br>
+<br>
+
+<form action="buys.jsp" class=p2>
+<div class="imgcontainer">
+      <img src="C:\Users\NIVEDITHA\OneDrive\Desktop\project images/order.jpg"  class="avatar">
+    </div>
+
+    <div class="container">
+    
+    <label for="ord_no"><b>Order No:</b></label>
+      <input id="num" type="text"  name="ord_no" required/>
+      <script type="text/javascript">document.getElementById('num').value = Math.floor(Math.random()*1000);</script>
+<label for="cu_id"><b>User Id:</b></label>
+      <input type="text" placeholder="Enter Your Id" name="cu_id" required/>
+
+      <label for="pr_id"><b>Product Id:</b></label>
+      <input type="text" placeholder="Enter Product Id" name="pr_id" required/>
+
+
+
+<br><br>
+<label for="o_date"><b>Ordered Date:</b></label>
+      <input type="text" id="date" name="o_date">
+<script type="text/javascript">
+document.getElementById('date').value = new Date().toISOString().slice(0,10);</script>
+
+<label for="delivery_by"><b>Expected delivery By:</b></label>
+      <input type="text" id="ddate" name="delivery_by">
+<script type="text/javascript">function addDays(theDate,days){
+	return new Date(theDate.getTime()+days*24*60*60*1000);
+}
+var d = addDays(new Date(),10);
+document.getElementById('ddate').value = d.toISOString().slice(0,10);
+</script>
+
+
+      
+      <br><br>
+      
+      <button onclick="myFunction()">BUY</button>
+      <p id="demo"></p>
+      <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = " ordered successfully!";
+}
+</script>
+           
+<br>
+<br>
+
+      </div>
+  </form>
+  
+</body>
+</html>
